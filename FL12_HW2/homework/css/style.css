@@ -26,7 +26,7 @@
   background-color: lightgrey;
 }
 
-.heading h2 {
+.heading h2, .tm-team-description-container h2{
   text-align: center;
   color: lightskyblue;
 }
@@ -35,6 +35,10 @@
   font-style: italic;
   word-spacing: 10px;
   letter-spacing: 5px;
+}
+
+.blocks h2 {
+  text-align: left;
 }
 
 .box p::first-letter {
@@ -103,7 +107,6 @@
   .flex-2-col {
     display: flex;
     align-items: center;
-    text-align: center;
   }
 
   .heading ol {
