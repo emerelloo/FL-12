@@ -1,0 +1,234 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: $contentBackgroundColor;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: $mainTextColor;
+}
+
+main, .header-wrap {
+  margin: 0 auto;
+  width: 960px;
+}
+
+$fontWeight: (
+  large: 600,
+  extra-large: 700
+);
+
+@mixin linx ($fontSize, $color) {
+  color: $color;
+  font-size: $fontSize;
+}
+
+@mixin btn {
+  padding: 8px 26px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  background-color: $buttonColor;
+  color: $secondaryTextColor;
+  border: none;
+  border-radius: 1px;
+  font-family: inherit;
+}
+
+.landing-logo {
+  display: flex;
+  align-items: center;
+  font-family: $mainTextFontFamily;
+  line-height: 1;
+  p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: map-get($fontWeight, large);
+    span {
+      font-size: 0.4rem;
+      font-weight: normal;
+    }
+  }
+  img {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+  }
+}
+
+.header {
+  height: 450px;
+  border-radius: 0 0 40% 0;
+  background-image: $mainBackgroundImage;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .header_heading {
+    position: relative;
+    z-index: 1;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    max-width: 325px;
+    font-size: 3rem;
+    font-weight: map-get($fontWeight, extra-large);
+    line-height: 1;
+    &:after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 62%;
+      left: 0;
+      width: 204px;
+      height: 35px;
+      background-color: $highlightedTextColor;
+    }
+  }
+  .header_text {
+    font-size: 0.7rem;
+    max-width: 382px;
+    margin-bottom: 2.5rem;
+  }
+  .header_button {
+    @include btn;
+  }
+  a {
+    margin-left: 6rem;
+    @include linx(0.7rem, $secondaryTextColor);
+  }
+}
+
+.section {
+  position: relative;
+  margin-bottom: 117px;
+  .section_text {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    font-size: 1.7rem;
+    font-weight: map-get($fontWeight, large);
+    &:after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0%;
+      left: 50.5%;
+      width: 123px;
+      height: 29px;
+      background-color: $highlightedTextColor;
+    }
+  }
+  .section_card_wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .section_card {
+      display: flex;
+      width: 700px;
+      height: 204px;
+      padding: 12px;
+      margin-bottom: 17px;
+      border-radius: 4px;
+      color: $secondaryTextColor;
+      background-color: $mainBackgroundColor;
+      img {
+        flex-basis: 45%;
+        border-radius: 4px;
+      }
+      .section_card_right_container {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        flex-basis: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .section_card_heading {
+          font-size: 1rem;
+          font-weight: map-get($fontWeight, large);
+        }
+        .section_card_text {
+          width: 300px;
+          margin-left: auto;
+          margin-right: auto;
+          font-size: 0.6rem;
+          font-family: $mainTextFontFamily;
+        }
+        .section_link {
+          display: block;
+          margin-top: auto;
+          @include linx(0.6rem, $secondaryTextColor);
+        }
+      }
+    }
+  }
+  .section_banner {
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 754px;
+    height: 92px;
+    padding-left: 100px;
+    padding-right: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 4px;
+    background-image: linear-gradient(to right, $buttonColor , $gradientColor);
+  }
+  .section_banner_heading {
+    margin: 0;
+    font-weight: map-get($fontWeight, extra-large);
+    font-size: 1.2rem;
+    position: relative;
+    z-index: 1;
+    &:after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: -20%;
+      left: 29%;
+      width: 43px;
+      height: 29px;
+      background-color: $highlightedTextColor;
+    }
+  }
+  .section_banner_text {
+    color: $secondaryTextColor;
+    font-size: 0.6rem;
+  }
+  .section_banner_button {
+    @include btn;
+  }
+}
+
+.footer {
+  margin: 0 auto;
+  height: 150px;
+  width: 1210px;
+  background-color: $mainBackgroundColor;
+  color: $secondaryTextColor;
+  .footer-wrap {
+    @extend .header-wrap;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .footer_logo {
+      flex-basis: 30%;
+      padding-top: 3rem;
+    }
+    .footer_text {
+      flex-basis: 30%;
+      padding-top: 3rem;
+      font-size: 0.6rem;
+      font-family: $mainTextFontFamily;
+    }
+    .footer-cr {
+      flex-basis: 25%;
+      padding-top: 3rem;
+      font-size: 0.6rem;
+      text-align: right;
+    }
+  }
+}
