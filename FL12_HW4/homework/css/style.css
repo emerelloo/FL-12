@@ -1,0 +1,188 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  color: #777;
+}
+
+html {
+  font-size: 14px;
+}
+
+a {
+  color: #777;
+  text-decoration: none;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 70px;
+  background-color: #fff;
+}
+
+.header__box {
+  margin: 0 auto;
+  max-width: 930px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  padding: 10px 13px;
+  font-size: 1.2em;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.header__navigation a {
+  letter-spacing: 0.14em;
+  padding: 10px 13px;
+  font-size: 0.96em;
+}
+
+.header__navigation a:hover {
+  color: #bfba55;
+}
+
+.hero {
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  background-image: url("../img/home-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover; 
+  background-blend-mode: multiply;
+  text-align: center;
+}
+
+.hero__title {
+  margin: 0;
+  padding-top: 49vh;
+  color: #fff;
+  font-size: 4.1em;
+}
+
+.hero__paragraph {
+  color: #bfba55;
+  font-size: 0.83em;
+  letter-spacing: 0.14em;
+}
+
+.hero__btn {
+  margin-top: 3em;
+  padding: 11px 16px;
+  background-color: #fff;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 50px;
+  font-size: 0.7em;
+  letter-spacing: 0.07em;
+  cursor: pointer;
+}
+
+main {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  margin: 0 auto;
+  max-width: 760px;
+}
+
+.article {
+  margin-top: 70px;
+  margin-bottom: 50px;
+}
+
+.article__image {
+  width: 100%;
+}
+
+.article__title {
+  margin-top: 1.3em;
+  margin-bottom: 0.3em;
+  font-size: 1.7em;
+  color: #000;
+}
+
+.article-details {
+  display: flex;
+  align-items: center
+}
+
+.article-details__author {
+  display: flex;
+  align-items: center;
+}
+
+.article-details__author img {
+  margin-right: 5px;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+}
+
+.article-details__author h3 {
+  font-size: 1em;
+  font-weight: normal;
+}
+
+.article-details__info {
+  padding-left: 16px;
+}
+
+.article__content {
+  margin-bottom: 30px;
+  line-height: 1.4em;
+}
+
+.article__link {
+  padding: 11px 25px;
+  border: 1px solid #777;
+  border-radius: 50px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+hr {
+  opacity: 0.2;
+}
+
+.footer {
+  height: 285px;
+  background-color: #000;
+}
+
+.footer__box {
+  padding-top: 60px;
+  display: flex;
+  margin: 0 auto;
+  max-width: 760px;
+}
+
+.footer__header {
+  margin-bottom: 0.6em;
+  font-size: 1.6em;
+  font-weight: 600;
+  color: #fff;
+}
+
+.footer__info {
+  flex-basis: 50%;
+}
+
+.footer__info p {
+  line-height: 1.4;
+}
+
+.footer__contact {
+  margin-left: auto;
+  margin-right: 25px;
+}
